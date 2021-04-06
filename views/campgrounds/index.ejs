@@ -4,13 +4,12 @@
     <h1>All Campgrounds</h1>
 
     <% if(campgrounds[0]) {%> 
-        <% console.log(campgrounds) %> 
         <% for (let campground of campgrounds){ %>
             <div class="card mb-3">
                 <div class="row">
                     <% if(campground.images[0].thumbnail) { %>
                     <div class="col-md-4">
-                        <img class="img-fluid" src="" <%=campground.images[0].url%> alt="">
+                        <img class="img-fluid" src="<%=campground.images[0].url%>" alt="">
                     </div>
                     <% } else {%>
                         <img class="img-fluid" src="https://res.cloudinary.com/dv7tj0hmo/image/upload/v1617523717/YelpCamp/default_u0dkxs.jpg" alt="">
